@@ -18,19 +18,6 @@ let db = new sqlite3.Database("zitate.db", (err) => {
             if(err){
                 return;
             }
-            var insert = "INSERT INTO zitate (name, msg, created) VALUES (?,?,?)";
-
-            db.run(insert, [
-                "Noah",
-                "das ist ein Test",
-                Date.now(),
-            ]);
-
-            db.run(insert, [
-                "Italiner",
-                "Der zweiter test",
-                Date.now(),
-            ]);
         }
     );
 });
